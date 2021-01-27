@@ -1,0 +1,13 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+
+<h1>Files : [{{ directory.name }}]</h1>
+<br>
+{% for document in documents %}
+	{{ document.file.name }}- {{ document.uploaded_by }} - {{ document.uploaded_at }} - <a href="{{ document.file.url }}">Download</a> <br>
+
+{% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+
+<h1>Directories</h1>
+<br>
+{% for dir in dirs %}
+	<a href="{% url 'docs_list' dir.pk %}">{{ dir.name }} </a>- {{ dir.created_by }} - {{ dir.created_at }} <br>
+
+{% endfor %}
+
+
+{% endblock %}
